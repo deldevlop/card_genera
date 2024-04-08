@@ -1,4 +1,4 @@
-# Hello World with Vanilla JS
+# Card Random Generator with Vanilla JS
 
 Start coding a JS/HTML/CSS website in 30 seconds by opening this template in [Codespaces](https://github.com/codespaces/new/?repo=4GeeksAcademy/vanillajs-hello) or [Gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/vanillajs-hello.git).
 
