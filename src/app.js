@@ -2,7 +2,6 @@
 import "bootstrap";
 import "./style.css";
 let cards = ["heart", "club", "diamond", "spade"];
-//let colors = ["red", "black"];
 
 function getRandomInt() {
   let randomNumber = Math.floor(Math.random() * 14) + 1;
@@ -27,31 +26,20 @@ function getRandomInt() {
   }
 }
 
-function getRandomColor(colors) {
-  let randomColorIndex = Math.floor(Math.random() * colors.length);
-  let colorChoice = colors[randomColorIndex];
+function setColorBlack() {
   let numberElement = document.getElementById("number");
-  switch (colorChoice) {
-    case "red":
-      console.log(colorChoice);
-      document.querySelectorAll("#elementCard").forEach(function(element) {
-        element.style.color = "red";
-      });
-      numberElement.style.color = "red";
-      break;
-    case "black":
-      console.log(colorChoice);
-      document.querySelectorAll("#elementCard").forEach(function(element) {
-        element.style.color = "black";
-      });
-      numberElement.style.color = "black";
-      break;
-    default:
-      document.querySelectorAll("#elementCard").forEach(function(element) {
-        element.style.color = "black";
-      });
-      numberElement.style.color = "black";
-  }
+  document.querySelectorAll("#elementCard").forEach(function(element) {
+    element.style.color = "black";
+  });
+  numberElement.style.color = "black";
+}
+
+function setColorRed() {
+  let numberElement = document.getElementById("number");
+  document.querySelectorAll("#elementCard").forEach(function(element) {
+    element.style.color = "red";
+  });
+  numberElement.style.color = "red";
 }
 
 function getRandomCard(cards) {
@@ -63,28 +51,28 @@ function getRandomCard(cards) {
       console.log(choice);
       document.querySelectorAll("#elementCard").forEach(function(element) {
         element.className = "bi bi-suit-heart-fill";
-        getRandomColor(colors);
+        setColorRed();
       });
       break;
     case "club":
       console.log(choice);
       document.querySelectorAll("#elementCard").forEach(function(element) {
         element.className = "bi bi-suit-club-fill";
-        getRandomColor(colors);
+        setColorBlack();
       });
       break;
     case "diamond":
       console.log(choice);
       document.querySelectorAll("#elementCard").forEach(function(element) {
         element.className = "bi bi-suit-diamond-fill";
-        getRandomColor(colors);
+        setColorRed();
       });
       break;
     case "spade":
       console.log(choice);
       document.querySelectorAll("#elementCard").forEach(function(element) {
         element.className = "bi bi-suit-spade-fill";
-        getRandomColor(colors);
+        setColorBlack();
       });
       break;
     default:
