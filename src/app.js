@@ -2,7 +2,7 @@
 import "bootstrap";
 import "./style.css";
 let cards = ["heart", "club", "diamond", "spade"];
-let colors = ["red", "black"];
+//let colors = ["red", "black"];
 
 function getRandomInt() {
   let randomNumber = Math.floor(Math.random() * 14) + 1;
